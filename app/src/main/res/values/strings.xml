@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Turtlemint</string>
+    <string name="no_network">No Internet Connection.\nMake sure Wi-Fi or cellular data is turn on, then try again.</string>
+    <string name="try_again">Try Again</string>
+    <string name="no_comments_made_yet">No comments made yet</string>
+    <string name="no_issue_found">No issue found</string>
+    <string name="no_comments_found">No comments found</string>
+
+    <string name="issue">Issue: %1$s</string>
+    <string name="issue_url">Issue URL: %1$s</string>
+    <string name="description">Description: %1$s</string>
+    <string name="comments_count">Comments: %1$s</string>
+    <string name="github_comment_value">Github Url: %1$s</string>
+    <string name="commented_on_value">%1$s</string>
+    <string name="powered_by_turtlemint">Powered By Turtlemint</string>
+    <string name="issue_list">Issue List</string>
+    <string name="issue_title">Issue Title</string>
+    <string name="issue_description">Issue Description</string>
+    <string name="see_more">See more</string>
+    <string name="see_less">See less</string>
+    <string name="comments">Comments</string>
+</resources>
