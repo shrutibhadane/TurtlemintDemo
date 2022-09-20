@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
-        binding.issuesLoader.setAnimation(R.raw.loader)
+        binding.lavIssuesLoader.setAnimation(R.raw.loader)
         viewModel = ViewModelProvider(this)[IssuesViewModel::class.java]
         binding.viewModel = viewModel
         binding.lifecycleOwner = this
@@ -74,20 +74,20 @@ class MainActivity : AppCompatActivity() {
                         } else {
                             viewModel.setCommentAvailableStatus()
                         }
-                        binding.issuesLoader.visibility = View.GONE
-                        binding.issuesLoader.cancelAnimation()
+                        binding.lavIssuesLoader.visibility = View.GONE
+                        binding.lavIssuesLoader.cancelAnimation()
                     }
                     Status.ERROR -> {
 
-                        binding.issuesLoader.visibility = View.GONE
-                        binding.issuesLoader.cancelAnimation()
+                        binding.lavIssuesLoader.visibility = View.GONE
+                        binding.lavIssuesLoader.cancelAnimation()
 
                         Toast.makeText(this, resource.message.orEmpty(), Toast.LENGTH_SHORT)
                             .show()
                     }
                     Status.LOADING -> {
-                        binding.issuesLoader.visibility = View.VISIBLE
-                        binding.issuesLoader.playAnimation()
+                        binding.lavIssuesLoader.visibility = View.VISIBLE
+                        binding.lavIssuesLoader.playAnimation()
 
                     }
                 }

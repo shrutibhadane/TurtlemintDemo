@@ -29,7 +29,7 @@
                 android:background="@color/white">
 
                 <com.airbnb.lottie.LottieAnimationView
-                    android:id="@+id/commentsLoader"
+                    android:id="@+id/lav_comments_loader"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_marginStart="@dimen/_50sdp"
@@ -178,7 +178,7 @@
                     tools:listitem="@layout/item_comments" />
 
                 <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/iv_no_data_found"
+                    android:id="@+id/iv_no_comments_found"
                     android:layout_width="@dimen/_100sdp"
                     android:layout_height="@dimen/_100sdp"
                     android:layout_marginTop="@dimen/_10sdp"
@@ -191,19 +191,19 @@
                     tools:visibility="gone" />
 
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tv_no_issues"
+                    android:id="@+id/tv_no_comments_found"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="@string/no_comments_found"
                     android:textAlignment="center"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/_14sdp"
+                    android:textSize="@dimen/_12sdp"
                     android:textStyle="normal"
                     android:typeface="sans"
                     android:visibility="@{viewModel.isCommentAvailable ? View.VISIBLE : View.GONE}"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/iv_no_data_found"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_no_comments_found"
                     tools:visibility="gone" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>

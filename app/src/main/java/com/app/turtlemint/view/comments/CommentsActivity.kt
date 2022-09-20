@@ -25,7 +25,7 @@ class CommentsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityCommentsBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
-        binding.commentsLoader.setAnimation(R.raw.loader)
+        binding.lavCommentsLoader.setAnimation(R.raw.loader)
         viewModel = ViewModelProvider(this)[CommentsViewModel::class.java]
         binding.viewModel = viewModel
         binding.lifecycleOwner = this
@@ -116,19 +116,19 @@ class CommentsActivity : AppCompatActivity() {
                         } else {
                             viewModel.setCommentAvailableStatus()
                         }
-                        binding.commentsLoader.visibility = View.GONE
-                        binding.commentsLoader.cancelAnimation()
+                        binding.lavCommentsLoader.visibility = View.GONE
+                        binding.lavCommentsLoader.cancelAnimation()
                     }
                     Status.ERROR -> {
 
-                        binding.commentsLoader.visibility = View.GONE
-                        binding.commentsLoader.cancelAnimation()
+                        binding.lavCommentsLoader.visibility = View.GONE
+                        binding.lavCommentsLoader.cancelAnimation()
                         Toast.makeText(this, resource.message.orEmpty(), Toast.LENGTH_SHORT)
                             .show()
                     }
                     Status.LOADING -> {
-                        binding.commentsLoader.visibility = View.VISIBLE
-                        binding.commentsLoader.playAnimation()
+                        binding.lavCommentsLoader.visibility = View.VISIBLE
+                        binding.lavCommentsLoader.playAnimation()
                     }
                 }
             }
